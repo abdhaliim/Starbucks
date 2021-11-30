@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <div class="doted"></div>
+        <header>
+            <a href="" ><img src="logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">What's New</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffe <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas id alias molestias asperiores velit? Molestiae, dolor! Nesciunt rerum at porro, expedita ullam rem atque cupiditate quod beatae, delectus veritatis impedit?</p>
+                <a href="">Learn More</a>
+            </div>
+            <div class="ImgBox">
+                <img src="img1.png" class="starbucks" alt="">
+            </div>
+        </div>
+       
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changedDottedColor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changedDottedColor('#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changedDottedColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt=""></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><img src="twitter.png" alt=""></a></li>
+        </ul>
+    </section>   
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changedDottedColor(color){
+            const doted = document.querySelector('.doted');
+            doted.style.background = color;
+        }
+    </script>
+</body>
+</html>
